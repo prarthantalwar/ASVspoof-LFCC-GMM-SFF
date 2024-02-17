@@ -119,7 +119,7 @@ else
     disp('Extracting features for SPOOF training data...');
     spoofFeatureCell = cell(size(spoofIdx));
     parfor i=1:length(spoofIdx)
-        filePath = fullfile(pathToASVspoof19,'LA','ASVspoof2019_LA_train/flac',[filelist{bonafideIdx(i)} '.flac']);
+        filePath = fullfile(pathToASVspoof19,'LA','ASVspoof2019_LA_train/flac',[filelist{spoofIdx(i)} '.flac']);
         [x,fs] = audioread(filePath);
         
         % featrue extraction
